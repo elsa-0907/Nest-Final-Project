@@ -1,0 +1,15 @@
+<div class="container row">
+  @for(product of products;track product.id){
+  <div class="card" style="width: 18rem;">
+    <div class="card-img text-center">
+      <img [src]="product.api_featured_image" class="card-img-top mx-auto" alt="{{product.name}}">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.description | slice:0:100}}</p>
+      <a class="btn btn-primary" (click)="viewProductDetails(product)">Buy Now</a>
+    </div>
+  </div>
+  }
+
+</div>
